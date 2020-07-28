@@ -1,0 +1,65 @@
+intents:
+- mood_saluer
+- mood_au_revoir
+- mood_affirmer
+- mood_nier
+- mood_super
+- mood_malheureux
+- mood_bot_challenge
+- request_question
+- mood_location
+- mood_parcours
+- mood_formation
+- mood_matiere
+
+entities:
+- location
+- parcour
+- formation
+- matiereee
+
+slots:
+  location:
+    type: text
+  parcour:
+    type: text
+  formation:
+    type: text
+  matiereee:
+    type: text
+  msg:
+    type: unfeaturized  
+  
+actions:
+  - action_hello_world  
+  - parcours
+  - formation
+  - matiere
+  
+responses:
+  utter_saluer_1:
+  - text: Bonjour! Comment ça va?
+  utter_encouragent:
+  - text: 'Voici quelque chose pour vous remonter le moral:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_cela_a_t_il_aide:
+  - text: Est-ce que cela vous a aidé?
+  utter_heureux_continuez:
+  - text: Super, comment je peux vous aider!
+  utter_continuez:
+  - text: Comment je peux vous aider!
+  utter_au_revoir:
+  - text: Au revoir
+  utter_iamabot_1:
+  - text: Je suis un bot, propulsé par Walid fils du vent et de la pluie.
+  utter_parcours:
+  - text: 'les parcours informatiques disponible sont :'
+  utter_satisfaction:
+  - text: Est-ce que cela vous a aidé dans votre recherche?
+  utter_matiere:
+  - text: matiere {matiereee} demander est
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
